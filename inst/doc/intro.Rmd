@@ -228,11 +228,11 @@ Finally it can be useful to print some text on top of images:
 image_annotate(frink, "I like R!", size = 70, gravity = "southwest", color = "green")
 
 # Customize text
-image_annotate(frink, "CONFIDENTIAL", size = 30, color = "red", boxcolor = "pink",
-  degrees = 60, location = "+50+100")
+#image_annotate(frink, "CONFIDENTIAL", size = 30, color = "red", boxcolor = "pink",
+#  degrees = 60, location = "+50+100")
 
 # Fonts may require ImageMagick has fontconfig
-image_annotate(frink, "The quick brown fox", font = 'Times', size = 30)
+#image_annotate(frink, "The quick brown fox", font = 'Times', size = 30)
 ```
 
 Fonts that are supported on most platforms include `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"`or `"Comic Sans"`.
