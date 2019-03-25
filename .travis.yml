@@ -8,6 +8,11 @@ env:
 matrix:
   include:
     - dist: trusty
+    - dist: xenial
+    - os: osx
+      brew_packages: imagemagick
+    - os: osx
+      brew_packages: imagemagick@6
       github_packages:
         - r-lib/pkgdown
         - ropensci/rotemplate
@@ -15,13 +20,8 @@ matrix:
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
         skip_cleanup: true
-        on:
-          tags: true
-    - dist: xenial
-    - os: osx
-      brew_packages: imagemagick
-    - os: osx
-      brew_packages: imagemagick@6
+#        on:
+#          tags: true
     - os: osx
       disable_homebrew: true
     - os: osx
