@@ -9,7 +9,9 @@ matrix:
   include:
     - dist: xenial
       sudo: true
-      before_script: 'sudo apt-get autoremove --purge'
+      before_install:
+        - sudo apt-get remove -y libmagick*
+        - sudo apt-get autoremove --purge
       addons:
         apt:
           update: true
