@@ -62,9 +62,9 @@ XPtrImage magick_image_readbitmap_double(Rcpp::NumericVector x){
 // [[Rcpp::export]]
 XPtrImage magick_image_readbin(Rcpp::RawVector x, Rcpp::CharacterVector density, Rcpp::IntegerVector depth, bool strip = false){
   XPtrImage image = create();
-#if MagickLibVersion >= 0x689
+#if MagickLibVersion > 0x689
   Magick::ReadOptions opts = Magick::ReadOptions();
-#if MagickLibVersion >= 0x690
+#if MagickLibVersion > 0x690
   opts.quiet(1);
 #endif
   if(density.size())
@@ -83,9 +83,9 @@ XPtrImage magick_image_readbin(Rcpp::RawVector x, Rcpp::CharacterVector density,
 // [[Rcpp::export]]
 XPtrImage magick_image_readpath(Rcpp::CharacterVector paths, Rcpp::CharacterVector density, Rcpp::IntegerVector depth, bool strip = false){
   XPtrImage image = create();
-#if MagickLibVersion >= 0x689
+#if MagickLibVersion > 0x689
   Magick::ReadOptions opts = Magick::ReadOptions();
-#if MagickLibVersion >= 0x690
+#if MagickLibVersion > 0x690
   opts.quiet(1);
 #endif
   if(density.size())
